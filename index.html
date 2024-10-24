@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leila Beheshti - Animator Portfolio</title>
+    <meta name="description" content="Portfolio of Leila Beheshti, Animator specializing in 2D Animation and VR Projects">
+    <meta name="keywords" content="Leila Beheshti, Animator, 2D Animation, VR Projects, Portfolio">
+
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+
+    <style>
+        .work-sans {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        #menu-toggle:checked + #menu {
+            display: block;
+        }
+
+        .hover\:grow {
+            transition: all 0.3s;
+            transform: scale(1);
+        }
+
+        .hover\:grow:hover {
+            transform: scale(1.02);
+        }
+
+        .carousel-open:checked + .carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+
+        #carousel-1:checked ~ .control-1,
+        #carousel-2:checked ~ .control-2,
+        #carousel-3:checked ~ .control-3,
+        #carousel-4:checked ~ .control-4,
+        #carousel-5:checked ~ .control-5 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+        #carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+        #carousel-5:checked ~ .control-5 ~ .carousel-indicators li:nth-child(5) .carousel-bullet {
+            color: #000;
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 py-1">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
+
+            <label for="menu-toggle" class="cursor-pointer md:hidden block">
+                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20">
+                    <title>menu</title>
+                    <path
+                        d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z">
+                    </path>
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+
+            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+                <nav>
+                    <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#about">About Me</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#projects">Projects</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#contact">Get in Touch</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="order-1 md:order-2">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+                    href="#">
+                    <img class="fill-current text-gray-800 mr-2" src="logo.png" alt="Logo" width="24" height="24">
+                    Leila Beheshti
+                </a>
+            </div>
+
+            <div class="order-2 md:order-3 flex items-center" id="nav-content">
+                <!-- Social Media Icons -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto text-center py-6">
+        <h1 class="text-5xl font-bold leading-tight">Leila Beheshti</h1>
+        <p class="text-2xl">Animator Portfolio</p>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about" class="bg-white py-8">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="mb-4">I was born in Iran in 1983, where I began my journey in the world of animation. With around six years of experience in 2D animation, I specialize in vectorizing original characters in Anime Studio, followed by rigging and animating them. I am also proficient in compositing animations using After Effects.</p>
+            <p class="mb-4">Since moving to the USA, I have aimed to connect my traditional art with technology. This passion has led me to explore sketching and painting in virtual reality, particularly through Quill VR, which I see as a thrilling new adventure in my creative journey.</p>
+            <p class="mb-4">My goal is to create vibrant and compelling characters that resonate with audiences in both 2D software and the immersive world of virtual reality. I am excited about the endless possibilities that technology offers for storytelling and character development, and I can’t wait to bring my imaginative creations to life in both realms.</p>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">Table of Contents</h2>
+            <ul class="list-disc list-inside">
+                <li><a href="#vr-projects" class="text-blue-500 hover:underline">VR Projects</a></li>
+                <li><a href="#2d-animation" class="text-blue-500 hover:underline">2D Animation</a></li>
+                <li><a href="#character-design" class="text-blue-500 hover:underline">2D Character Design</a></li>
+                <li><a href="#motion-graphics" class="text-blue-500 hover:underline">Motion Graphics</a></li>
+                <li><a href="#short-animation" class="text-blue-500 hover:underline">Short Animation</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white py-8">
+        <div class="container mx-auto px-6">
+
+            <!-- VR Projects -->
+            <div id="vr-projects" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">VR Projects</h2>
+                <h3 class="text-2xl font-semibold mb-2">Destino In VR</h3>
+                <p class="mb-4">"Destino" is a unique 2D animation created by Salvador Dalí and Disney, originally conceived in 1942 and completed in 2012. In my project, I recreated a segment of this iconic animation using Quill software in virtual reality, marking my first use of this innovative tool.</p>
+                <h4 class="text-xl font-semibold mb-2">What I Have Done:</h4>
+                <p class="mb-4">I explored painting and illustrating in an immersive environment while animating objects. My design is inspired by Dalí's sketches but adapted to fit the capabilities of the software, allowing me to present a fresh interpretation of the surrealistic storytelling of "Destino."</p>
+                <div class="video-container mb-4">
+                    <iframe class="w-full" height="480" src="https://www.youtube.com/embed/ZEUnkEvj1Q4" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <ul class="list-disc list-inside mb-4">
+                    <li>2D Form in 3D Space: Painting in Quill</li>
+                    <li>Sketch of Salvador Dalí's Face</li>
+                    <li>Painting of Salvador Dalí's Face</li>
+                    <li>Painting of Female Body</li>
+                    <li>Modeling Techniques in Quill VR</li>
+                </ul>
+            </div>
+
+            <!-- 2D Animation -->
+            <div id="2d-animation" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">2D Animation</h2>
+                <h3 class="text-2xl font-semibold mb-2">Project Name: 2D Animation</h3>
+                <p class="mb-4">I specialized in vectorizing characters using Moho, followed by rigging and animating them for both movies and advertisements. My process begins with creating vector-based characters, moving on to rigging, and then bringing them to life through animation.</p>
+                <div class="video-container mb-4">
+                    <iframe class="w-full" height="480" src="https://www.youtube.com/embed/GjtJyxVQZ-c" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- 2D Character Design -->
+            <div id="character-design" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">2D Character Design</h2>
+                <h3 class="text-2xl font-semibold mb-2">Project Name: 2D Character Design</h3>
+                <p class="mb-4">I have sketched various human characters as part of my experience, while also exploring imaginative animal designs. I give these animals human-like personalities, such as a hippo as a mafia boss or a frog as a dancer, creating fun and expressive character concepts.</p>
+                <div class="video-container mb-4">
+                    <iframe class="w-full" height="480" src="https://www.youtube.com/embed/9jofuj7SEIc" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Motion Graphics -->
+            <div id="motion-graphics" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">Motion Graphics</h2>
+                <h3 class="text-2xl font-semibold mb-2">Project Name: Motion Graphics</h3>
+                <p class="mb-4">I have experience in creating motion graphics for advertisements, including compositing and designing collage-style animations. Additionally, I have worked on motion designs for projects such as the history of advertising and scientific animations, blending visual storytelling with informative content.</p>
+                <div class="video-container mb-4">
+                    <iframe class="w-full" height="480" src="https://www.youtube.com/embed/x1zPkz4OXbg" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Short Animation -->
+            <div id="short-animation" class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">Short Animation</h2>
+                <h3 class="text-2xl font-semibold mb-2">Project Name: What You Wish For</h3>
+                <p class="mb-4">Group 3D Animation Project</p>
+                <p class="mb-4">This project involved a collaborative effort to create a 3D animated scene. My contributions focused on both 2D and 3D elements. I was responsible for creating 2D animations that captured the dynamic expressions of fire, ensuring lifelike movement and visual appeal. Additionally, I worked on simple 3D modeling in Maya, where I designed and modeled environmental assets, including a variety of trees, rocks, and mountains. These assets helped bring the landscape to life and provided a rich backdrop for the overall animation. This project allowed me to further develop my skills in both animation and modeling while working effectively as part of a team.</p>
+                <div class="video-container mb-4">
+                    <iframe class="w-full" height="480" src="https://www.youtube.com/embed/q6WqQlrFyQg" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Get in Touch Section -->
+    <section id="contact" class="bg-gray-100 py-8">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+            <p class="mb-2"><strong>Phone:</strong> 706-255-0277</p>
+            <p class="mb-2"><strong>Email:</strong> <a href="mailto:Leila.bv83@gmail.com" class="text-blue-500 hover:underline">Leila.bv83@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+        <div class="container flex px-3 py-8 ">
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full lg:w-1/2 ">
+                    <div class="px-3 md:px-0">
+                        <h3 class="font-bold text-gray-900">About</h3>
+                        <p class="py-4">
+                            Animator specializing in 2D Animation and Virtual Reality projects, creating vibrant and compelling characters that resonate with audiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right mt-6 md:mt-0">
+                    <div class="px-3 md:px-0">
+                        <h3 class="text-left font-bold text-gray-900">Social</h3>
+                        <div class="w-full flex items-center py-4 mt-0">
+                            <a href="#" class="mx-2">
+                                <!-- Twitter Icon -->
+                            </a>
+                            <a href="#" class="mx-2">
+                                <!-- Facebook Icon -->
+                            </a>
+                            <a href="#" class="mx-2">
+                                <!-- Instagram Icon -->
+                            </a>
+                            <a href="#" class="mx-2">
+                                <!-- LinkedIn Icon -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
